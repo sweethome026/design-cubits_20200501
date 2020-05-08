@@ -255,7 +255,7 @@ body {
 ** main common
 ==================================================*/
 
-// inの後にコンマで区切って、各ページのbodyのIDをかいていく（by Gita△）
+// inの後にコンマで区切って、各ページのbodyのIDをかいていく
 // #aboutなどとID名を書くとエラーになるので、##{$page-name}とした。
 // .mainの中に書くとエラーになるので別に記載した。
 $page-name-list: about, services, blog, contact;
