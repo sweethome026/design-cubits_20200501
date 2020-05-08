@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*
-Theme Name: design cubits 20200508
+Theme Name: design cubits 20200331
 Theme URL: テーマのサイトのURI
 Description: テーマの説明
 Author: 作者の名前
@@ -1292,7 +1292,7 @@ Page style
 ** serbices
 ** blog
 ** contact
-**
+** page-default
 **
 
 */
@@ -2404,6 +2404,34 @@ Page style
   font-size: 1.6rem;
   color: #fff;
   font-weight: 900;
+}
+
+/*==================================================
+
+** page-default
+==================================================*/
+#page-default .main #contents {
+  margin-top: 80px;
+}
+
+#page-default .main #contents h2 {
+  margin-top: 80px;
+}
+
+#page-default .main #contents h3 {
+  margin-top: 80px;
+}
+
+#page-default .main #contents h4 {
+  margin-top: 70px;
+}
+
+#page-default .main #contents h4 + * {
+  margin-top: 30px;
+}
+
+#page-default .main #contents p + ul {
+  margin-top: 20px;
 }
 
 /* Tab & SP */
