@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*
-Theme Name: design cubits 20200331
+Theme Name: design cubits 20200508
 Theme URL: テーマのサイトのURI
 Description: テーマの説明
 Author: 作者の名前
@@ -562,6 +562,10 @@ body {
 
 #contact .pagettl {
   background-image: url("../imgs/contact/contact_pagettl_bg.jpg");
+}
+
+#page-default .pagettl {
+  background-image: url("../imgs/page-default/page-default_pagettl_bg.jpg");
 }
 
 .main {

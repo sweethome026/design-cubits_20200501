@@ -258,7 +258,7 @@ body {
 // inの後にコンマで区切って、各ページのbodyのIDをかいていく
 // #aboutなどとID名を書くとエラーになるので、##{$page-name}とした。
 // .mainの中に書くとエラーになるので別に記載した。
-$page-name-list: about, services, blog, contact;
+$page-name-list: about, services, blog, contact, page-default;
 @each $page-name in $page-name-list {
   ##{$page-name} .pagettl {
     background-image: url("../imgs/#{$page-name}/#{$page-name}_pagettl_bg.jpg");

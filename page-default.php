@@ -1,9 +1,9 @@
 <?php
 /**
- * Template Name: 固定ページのテンプレート（page.php）
+ * Template Name: 固定ページのテンプレート（page-default.php）
  */
 ?>
-<?php get_header(); ?>
+<?php get_header("pagedefault"); ?>
 
 <!-- main -->
 <main id="main" class="main">

@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 /*
 Theme Name: design cubits 20200508
 Theme URL: テーマのサイトのURI
@@ -10,7 +9,6 @@ Tags: テーマの特徴を表すタグ（カンマ区切り/オプション）
 License: テーマのライセンス
 License URI: テーマのライセンスのURI
 */
-
 /*==================================================
 
 fonts
@@ -566,6 +564,10 @@ body {
   background-image: url("../imgs/contact/contact_pagettl_bg.jpg");
 }
 
+#page-default .pagettl {
+  background-image: url("../imgs/page-default/page-default_pagettl_bg.jpg");
+}
+
 .main {
   margin-top: 90px;
 }
@@ -615,15 +617,17 @@ body {
 
 .main .breadcrumbs ol li + li {
   margin-left: 10px;
+  padding-left: 10px;
 }
 
 .main .breadcrumbs ol li + li:before {
   content: "\f105";
-  margin-right: 1rem;
   font-family: "Font Awesome 5 Free";
   font-weight: bold;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  position: absolute;
+  left: 46px;
 }
 
 .main .breadcrumbs ol li + li:last-child {
@@ -1312,7 +1316,7 @@ Page style
 }
 
 #top .mainvsl__slogan__sentence {
-  letter-spacing: 0.03em;
+  letter-spacing: 0.03;
   font-size: 4.7rem;
   line-height: 120%;
   font-weight: bold;
@@ -1324,7 +1328,7 @@ Page style
   bottom: 60px;
   z-index: 49;
   height: 110px;
-  width: auto;
+  max-width: auto;
 }
 
 #top .feature .lh-l {
@@ -1387,12 +1391,38 @@ Page style
 }
 
 #top .blog__info__tag {
-  margin-right: 16px;
   display: block;
-  width: 110px;
+  min-width: 110px;
+  margin-right: 16px;
+  padding-left: 5px;
+  padding-right: 5px;
   text-align: center;
   line-height: 175%;
   color: #fff;
+}
+
+#top .blog__info .tag--illustrator {
+  background-color: #f0b899;
+}
+
+#top .blog__info .tag--wp {
+  background-color: #99d1f0;
+}
+
+#top .blog__info .tag--coding {
+  background-color: #c9e693;
+}
+
+#top .blog__info .tag--others {
+  background-color: #f099a6;
+}
+
+#top .blog__info .tag--freelance {
+  background-color: #99a6f0;
+}
+
+#top .blog__info .tag--days {
+  background-color: #f0e399;
 }
 
 #top .blog__info .tag--css {
@@ -1780,44 +1810,46 @@ Page style
 }
 
 #blog .blog-main .article__info__tag {
-  margin-right: 16px;
   display: block;
-  width: 110px;
+  min-width: 110px;
+  margin-right: 16px;
+  padding-left: 5px;
+  padding-right: 5px;
   text-align: center;
   line-height: 175%;
   color: #fff;
 }
 
-#blog .blog-main .article__info__date {
+#blog .blog-main .article__info__date　 {
   line-height: 175%;
   color: #666666;
 }
 
-#blog .blog-main .article__info .tag--illustrator {
+#blog .blog-main .article__info .tag--illustrator　 {
   background-color: #f0b899;
 }
 
-#blog .blog-main .article__info .tag--wp {
+#blog .blog-main .article__info .tag--wp　 {
   background-color: #99d1f0;
 }
 
-#blog .blog-main .article__info .tag--coding {
+#blog .blog-main .article__info .tag--coding　 {
   background-color: #c9e693;
 }
 
-#blog .blog-main .article__info .tag--others {
+#blog .blog-main .article__info .tag--others　 {
   background-color: #f099a6;
 }
 
-#blog .blog-main .article__info .tag--freelance {
+#blog .blog-main .article__info .tag--freelance　 {
   background-color: #99a6f0;
 }
 
-#blog .blog-main .article__info .tag--days {
+#blog .blog-main .article__info .tag--days　 {
   background-color: #f0e399;
 }
 
-#blog .blog-main .article__info .tag--css {
+#blog .blog-main .article__info .tag--css　 {
   background-color: #9ad1ef;
 }
 
@@ -1838,7 +1870,7 @@ Page style
   overflow: hidden;
   text-overflow: ellipsis;
   line-height: 150%;
-  font-size: 1.4rem;
+  font-weight: 1.4rem;
 }
 
 #blog .blog-main .pagenation {
@@ -1854,6 +1886,7 @@ Page style
 }
 
 #blog .blog-main .pagenation a, #blog .blog-main .pagenation span {
+  display: inline-block;
   margin-right: 10px;
   height: 40px;
   width: 40px;
@@ -1881,6 +1914,14 @@ Page style
 
 #blog .blog-main .pagenation .abbreviation-dots {
   background-color: transparent;
+}
+
+#blog .blog-main .pagenation .pages {
+  display: none;
+}
+
+#blog .blog-main .pagenation .wp-pagenavi span:nth-child(3) {
+  display: none;
 }
 
 #blog .blog-sidebar {
@@ -1945,12 +1986,57 @@ Page style
 #blog .widget .category__lists__item {
   position: relative;
   font-size: 1.7rem;
-  padding-right: 40px;
   padding-left: 0;
 }
 
 #blog .widget .category__lists__item:before {
   content: none;
+}
+
+#blog .widget .category__lists .cat-item {
+  position: relative;
+  font-size: 1.7rem;
+  padding-left: 0;
+}
+
+#blog .widget .category__lists .cat-item:before {
+  content: none;
+}
+
+#blog .widget .category__lists .cat-item ul li {
+  padding-right: 0;
+}
+
+#blog .widget .category__lists .cat-item a:before {
+  content: "\f138";
+  padding-right: 1rem;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 90%;
+  color: #17636c;
+  line-height: 175%;
+}
+
+#blog .widget .category__lists .cat-item .children {
+  margin-top: 1rem;
+  padding-left: 3rem;
+}
+
+#blog .widget .category__lists .cat-item .children .cat-item {
+  padding-left: 1.562em;
+  position: relative;
+  padding-right: 0;
+}
+
+#blog .widget .category__lists .cat-item .children .cat-item a:before {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  content: "\f111";
+  font-family: "Font Awesome 5 Free";
+  font-size: 80%;
+  font-weight: 900;
+  color: #17636c;
 }
 
 #blog .widget .category__name:before {
@@ -2009,12 +2095,15 @@ Page style
 }
 
 #blog .widget .recent-posts__article__info {
-  margin-right: 16px;
   display: block;
-  width: 110px;
+  min-width: 110px;
+  margin-right: 16px;
+  padding-left: 5px;
+  padding-right: 5px;
   text-align: center;
   line-height: 175%;
   color: #fff;
+  max-width: 200px;
 }
 
 #blog .widget .recent-posts__article__title {
@@ -2026,6 +2115,7 @@ Page style
 #blog .widget .recent-posts__article__date {
   display: inline-block;
   margin-top: 4px;
+  line-height: 175%;
   color: #666666;
 }
 
@@ -2228,6 +2318,10 @@ Page style
 
 ** contact
 ==================================================*/
+#contact {
+  /*Contact Form 7カスタマイズ*/
+}
+
 #contact .contact-contents {
   margin-top: 50px;
 }
@@ -2249,12 +2343,67 @@ Page style
   margin-top: 80px;
 }
 
-/*Contact Form 7カスタマイズ*/
-.wpcf7 {
+#contact .wpcf7 {
   width: 95%;
   max-width: 880px;
   margin-right: auto;
   margin-left: auto;
+}
+
+#contact .wpcf7-text, #contact .wpcf7-textarea {
+  display: block;
+  width: 100%;
+  text-align: left;
+  margin: 3px 0 0;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 0.5em;
+  min-width: 100%;
+  max-width: 100%;
+  border: 1px solid #cccccc;
+  background: #f8f5ee;
+  border-radius: 10px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+#contact .required__notice {
+  position: relative;
+  left: 5px;
+  font-size: 1.2rem;
+}
+
+#contact .required__notice:before {
+  position: relative;
+  bottom: 1px;
+  margin-right: 2px;
+  content: "\f069";
+  font-family: "Font Awesome 5 Free";
+  font-size: 80%;
+  font-weight: 900;
+  color: #17636c;
+}
+
+#contact .wpcf7-text {
+  min-height: 60px;
+}
+
+#contact .submit_outer {
+  text-align: center;
+}
+
+#contact .wpcf7-submit {
+  display: inline-block;
+  margin: 40px auto 0;
+  min-width: 280px;
+  height: 55px;
+  background: #68c4cd;
+  border-radius: 27.5px;
+  font-size: 1.6rem;
+  color: #fff;
+  font-weight: 900;
 }
 
 /* Tab & SP */
