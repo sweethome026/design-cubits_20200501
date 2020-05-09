@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: ブログトップページのテンプレート new
+ * Template Name: ブログトップページのテンプレート
  */
 ?>
 
@@ -13,7 +13,6 @@
 		<h1 class="pagettl__ttl">ブログ</h1>
 		<p class="pagettl__description">フリーランスとして働くWebデザイナーの備忘録・メモ</p>
 	</div>
-
 
 	<div class="breadcrumbs wrap">
 		<ol>
