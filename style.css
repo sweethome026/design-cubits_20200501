@@ -1924,6 +1924,10 @@ Page style
   display: none;
 }
 
+#blog .blog-main .pagenation .wp-pagenavi .extend {
+  background-color: transparent;
+}
+
 #blog .blog-sidebar {
   margin-top: 73px;
   width: 28%;

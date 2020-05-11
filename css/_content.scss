@@ -629,12 +629,40 @@ Page style
 			.pages {
 				display: none;
 			}
+		}
 
-			.wp-pagenavi {
-				span:nth-child(3) {
-					display: none;
-				}
+		.wp-pagenavi {
+			display: flex;
+			margin-top: 80px;
+			margin-right: auto;
+			margin-left: auto;
+			justify-content: center;
+
+			a, span {
+				display: inline-block;
+				margin-right: 8px;
+				height: 40px;
+				width: 40px;
+				border-radius: 50%;
+				text-align: center;
+				line-height: 34px;
+				text-decoration: none;
+				color: $color-txt03;
+				font-family: "Viga";
+				background-color: $color-bg02;
+				border-color: transparent;
 			}
+
+			.current, .first, .last {
+				background-color: $color-main;
+				color: $color-trueWhite;
+			}
+
+			.extend {
+				background-color: transparent;
+			}
+
+
 		}
 	}
 
