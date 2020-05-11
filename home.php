@@ -77,27 +77,6 @@
 
 			</div><!-- //articles -->
 
-			<!-- <div class="pagenation">
-				<a href="#" class="first">
-					<i class="fas fa-angle-double-left"></i>
-				</a>
-				<a href="#" class="prev">
-					<i class="fas fa-angle-left"></i>
-				</a>
-				<span class="current">1</span>
-				<a href="#" class="inactive">2</a>
-				<a href="#" class="inactive">3</a>
-				<a href="#" class="inactive">4</a>
-				<a href="#" class="inactive">5</a>
-				<span class="abbreviation-dots">…</span>
-				<a href="#" class="next">
-					<i class="fas fa-angle-right"></i>
-				</a>
-				<a href="#" class="last">
-					<i class="fas fa-angle-double-right"></i>
-				</a>
-			</div> -->
-
 			<?php $paged = get_query_var('paged')? get_query_var('paged') : 1;
 				$args = array(
 				'post_type' => 'post',

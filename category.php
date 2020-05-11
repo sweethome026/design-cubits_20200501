@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: ブログトップページのテンプレート（category.php）
+ * Template Name: ブログトップページのテンプレート(category.php)
  */
 ?>
 
@@ -29,9 +29,7 @@
 
 				<!-- メインループ開始 -->
 				<?php
-
-
-        if (have_posts()) : while (have_posts()) : the_post(); ?>
+			        if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 				<!-- 記事データの取得 -->
 				<article id="post-<?php the_ID(); ?>" <?php post_class('article'); ?>>
@@ -39,27 +37,27 @@
 						<div class="article__info">
 							<!-- 以下spanタグをecho -->
 							<?php
-                  $this_categories = get_the_category();
-                  $this_categories = $this_categories[0];
-                  $parent_cat = $this_categories;
-                  if ($this_categories->category_parent) { //category_parentは親カテゴリの「ID」
-                    $parent_cat = get_category($this_categories->category_parent);
-                  }
-                  if ($this_categories) {
-                    $this_category_color = get_field('catcolor', 'category_' . $parent_cat->term_id);
-                    $this_category_name = $parent_cat->name;
-                    echo '<span class="article__info__tag" style="' . esc_attr('background:' . $this_category_color) . ';">';
-                  }
-                  ?>
+					$this_categories = get_the_category();
+					$this_categories = $this_categories[0];
+					$parent_cat = $this_categories;
+					if ($this_categories->category_parent) { //category_parentは親カテゴリの「ID」
+						$parent_cat = get_category($this_categories->category_parent);
+					}
+					if ($this_categories) {
+						$this_category_color = get_field('catcolor', 'category_' . $parent_cat->term_id);
+						$this_category_name = $parent_cat->name;
+						echo '<span class="article__info__tag" style="' . esc_attr('background:' . $this_category_color) . ';">';
+					}
+					?>
 							<!-- ↓ spanタグの中の文字 -->
 							<?php $cat = get_the_category();
-                  $cat = $cat[0];
-                  if ($cat->parent) {
-                    $parent = get_category($cat->parent);
-                    echo $parent->cat_name;
-                  } else {
-                    echo $cat->cat_name;
-                  } ?>
+					$cat = $cat[0];
+					if ($cat->parent) {
+						$parent = get_category($cat->parent);
+						echo $parent->cat_name;
+					} else {
+						echo $cat->cat_name;
+					} ?>
 							<!--テンプレートタグ the_category();を使うと、ul>li>aが出力されるので、カテゴリータイトルのみを取得。-->
 							<?php if ($this_categories) { ?>
 							</span>
@@ -79,27 +77,20 @@
 
 			</div><!-- //articles -->
 
-			<div class="pagenation">
-				<a href="#" class="first">
-					<i class="fas fa-angle-double-left"></i>
-				</a>
-				<a href="#" class="prev">
-					<i class="fas fa-angle-left"></i>
-				</a>
-				<span class="current">1</span>
-				<a href="#" class="inactive">2</a>
-				<a href="#" class="inactive">3</a>
-				<a href="#" class="inactive">4</a>
-				<a href="#" class="inactive">5</a>
-				<span class="abbreviation-dots">…</span>
-				<a href="#" class="next">
-					<i class="fas fa-angle-right"></i>
-				</a>
-				<a href="#" class="last">
-					<i class="fas fa-angle-double-right"></i>
-				</a>
-			</div><!-- //pagenation -->
-		</section><!-- //blog-main -->
+			<?php $paged = get_query_var('paged')? get_query_var('paged') : 1;
+				$args = array(
+				'post_type' => 'post',
+				// 'posts_per_page' => 1,
+				'paged' => $paged,
+				);
+				$myposts = new WP_Query($args);
+				if($myposts->have_posts()): while($myposts->have_posts()): $myposts->the_post();
+				?>
+			<?php endwhile; endif; wp_reset_postdata(); ?>
+			<?php if(function_exists('wp_pagenavi')) { wp_pagenavi(); } ?>
+		</section>
+
+		<!-- //blog-main -->
 
 		<?php get_sidebar(); ?>
 		<!-- //blog-sidebar -->
