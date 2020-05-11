@@ -24,7 +24,7 @@
 	<!-- contents -->
 	<div id="contents" class="blog-contents wrap">
 		<section class="blog-main">
-			<h2 class="heading">Illustratorの記事一覧</h2>
+			<h2 class="heading">全ての記事一覧</h2>
 			<div class="articles">
 
 				<!-- メインループ開始 -->
