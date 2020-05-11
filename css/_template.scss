@@ -286,43 +286,38 @@ $page-name-list: about, services, blog, contact, page-default;
 	  }
   }
 
-  .breadcrumbs ol {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 30px;
+	.breadcrumbs {
+		margin-top: 30px;
 
-    li {
-      font-size: 1.2rem;
-      color: $color-main;
+		span {
+			position: relative;
+			flex-wrap: wrap;
+			margin-top: 30px;
 
-      a:hover {
-        color: $color-logo;
-      }
+			a {
+				font-size: 1.2rem;
+				color: $color-main;
 
-      + li {
-        margin-left: 10px;
-        padding-left: 10px;
+				&:hover {
+					color: $color-logo;
+				}
+			}
+		}
 
-        &:before {
-          content: "\f105";
-          font-family: "Font Awesome 5 Free";
-          font-weight: bold;
-          box-sizing: border-box;
-          position: absolute;
-          left: 46px;
-        }
+		.current-item {
+			font-size: 1.2rem;
+			color: $color-txt01;
+		}
 
-        &:last-child {
-          color: $color-txt01;
 
-          &:before {
-            color: $color-main;
-          }
-        }
-      }
-    }
-  }
+		.fas {
+			margin-right: 10px;
+			margin-left: 10px;
+			font-size: 1.2rem;
+			font-weight: 700;
+			color: $color-main;
+		}
+	}
 
   h2 {
     margin-top: 80px;

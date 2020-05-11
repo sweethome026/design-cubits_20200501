@@ -638,6 +638,39 @@ body {
   color: #68c4cd;
 }
 
+.main .breadcrumbs {
+  margin-top: 30px;
+}
+
+.main .breadcrumbs span {
+  position: relative;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.main .breadcrumbs span a {
+  font-size: 1.2rem;
+  color: #68c4cd;
+}
+
+.main .breadcrumbs span a:hover {
+  color: #9fdde3;
+}
+
+.main .breadcrumbs .current-item {
+  font-size: 1.2rem;
+  color: #2d2421;
+}
+
+.main .breadcrumbs .fas {
+  margin-right: 10px;
+  margin-left: 10px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #68c4cd;
+}
+
 .main h2 {
   margin-top: 80px;
   text-align: center;
@@ -1920,11 +1953,39 @@ Page style
   display: none;
 }
 
-#blog .blog-main .pagenation .wp-pagenavi span:nth-child(3) {
-  display: none;
+#blog .blog-main .wp-pagenavi {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 80px;
+  margin-right: auto;
+  margin-left: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-#blog .blog-main .pagenation .wp-pagenavi .extend {
+#blog .blog-main .wp-pagenavi a, #blog .blog-main .wp-pagenavi span {
+  display: inline-block;
+  margin-right: 8px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 34px;
+  text-decoration: none;
+  color: #808080;
+  font-family: "Viga";
+  background-color: #ebebeb;
+  border-color: transparent;
+}
+
+#blog .blog-main .wp-pagenavi .current, #blog .blog-main .wp-pagenavi .first, #blog .blog-main .wp-pagenavi .last {
+  background-color: #68c4cd;
+  color: #fff;
+}
+
+#blog .blog-main .wp-pagenavi .extend {
   background-color: transparent;
 }
 
