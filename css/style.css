@@ -596,6 +596,48 @@ body {
   color: #17636c;
 }
 
+.main .breadcrumbs ol {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.main .breadcrumbs ol li {
+  font-size: 1.2rem;
+  color: #68c4cd;
+}
+
+.main .breadcrumbs ol li a:hover {
+  color: #9fdde3;
+}
+
+.main .breadcrumbs ol li + li {
+  margin-left: 10px;
+  padding-left: 10px;
+}
+
+.main .breadcrumbs ol li + li:before {
+  content: "\f105";
+  font-family: "Font Awesome 5 Free";
+  font-weight: bold;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: absolute;
+  left: 46px;
+}
+
+.main .breadcrumbs ol li + li:last-child {
+  color: #2d2421;
+}
+
+.main .breadcrumbs ol li + li:last-child:before {
+  color: #68c4cd;
+}
+
 .main .breadcrumbs {
   margin-top: 30px;
 }

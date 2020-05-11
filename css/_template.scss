@@ -286,6 +286,46 @@ $page-name-list: about, services, blog, contact, page-default;
 	  }
   }
 
+  //プラグインを使わないパンくずリストのスタイル
+  .breadcrumbs ol {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+
+    li {
+      font-size: 1.2rem;
+      color: $color-main;
+
+      a:hover {
+        color: $color-logo;
+      }
+
+      + li {
+        margin-left: 10px;
+        padding-left: 10px;
+
+        &:before {
+          content: "\f105";
+          font-family: "Font Awesome 5 Free";
+          font-weight: bold;
+          box-sizing: border-box;
+          position: absolute;
+          left: 46px;
+        }
+
+        &:last-child {
+          color: $color-txt01;
+
+          &:before {
+            color: $color-main;
+          }
+        }
+      }
+    }
+  }
+
+  	//プラグイン「Breadcrumb NavXT」で出力されるパンくずリストに当てるスタイル
 	.breadcrumbs {
 		margin-top: 30px;
 
