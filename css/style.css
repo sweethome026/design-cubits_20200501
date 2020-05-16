@@ -1426,7 +1426,7 @@ Page style
 #top .blog__info__tag {
   display: block;
   min-width: 110px;
-  margin-right: 16px;
+  max-width: 200px;
   padding-left: 5px;
   padding-right: 5px;
   text-align: center;
@@ -1845,12 +1845,13 @@ Page style
 #blog .blog-main .article__info__tag {
   display: block;
   min-width: 110px;
-  margin-right: 16px;
+  max-width: 200px;
   padding-left: 5px;
   padding-right: 5px;
   text-align: center;
   line-height: 175%;
   color: #fff;
+  margin-right: 16px;
 }
 
 #blog .blog-main .article__info__date　 {
@@ -2162,13 +2163,12 @@ Page style
 #blog .widget .recent-posts__article__info {
   display: block;
   min-width: 110px;
-  margin-right: 16px;
+  max-width: 200px;
   padding-left: 5px;
   padding-right: 5px;
   text-align: center;
   line-height: 175%;
   color: #fff;
-  max-width: 200px;
 }
 
 #blog .widget .recent-posts__article__title {

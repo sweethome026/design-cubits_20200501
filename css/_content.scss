@@ -530,6 +530,7 @@ Page style
 	
 				&__tag {
 					@include blog-tag;
+					margin-right: 16px;
 				}
 	
 				&__date　{
@@ -844,7 +845,6 @@ Page style
 
 				&__info {
 					@include blog-tag;
-					max-width: 200px;
 				}
 
 				&__title {
