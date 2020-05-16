@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: ブログトップページのテンプレート(category.php)
+ * Template Name: カテゴリー記事一覧のテンプレート(category.php)
  */
 ?>
 

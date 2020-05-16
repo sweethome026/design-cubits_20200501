@@ -36,13 +36,51 @@
 			</h2>
 			<?php if (have_posts()): ?>
 
-			<ul>
+			<div class="articles">
 				<?php while(have_posts()): the_post(); ?>
-				<li>
-					<a href="<?php the_permalink(); ?>"><?php echo get_the_title(); ?></a>
-				</li>
+				<div class="article">
+					<a class="blog__linkbox" href="<?php the_permalink(); ?>">
+						<div class="article__info">
+							<!-- article__info__tag -->
+							<?php
+								$this_categories = get_the_category();
+								$this_categories = $this_categories[0];
+								$parent_cat = $this_categories;
+								if ($this_categories->category_parent) { //category_parentは親カテゴリの「ID」
+									$parent_cat = get_category($this_categories->category_parent);
+								}
+								if ($this_categories) {
+									$this_category_color = get_field('catcolor', 'category_' . $parent_cat->term_id);
+									$this_category_name = $parent_cat->name;
+									echo '<span class="article__info__tag" style="' . esc_attr('background:' . $this_category_color) . ';">';
+								}
+							?>
+							<!-- ↓ spanタグの中の文字 -->
+							<?php $cat = get_the_category();
+								$cat = $cat[0];
+								if ($cat->parent) {
+									$parent = get_category($cat->parent);
+									echo $parent->cat_name;
+								} else {
+									echo $cat->cat_name;
+								} 
+							?>
+							<?php if ($this_categories) { ?>
+							</span>
+							<?php } ?>
+							<!-- //article__info__tag -->
+							<time class="article__info__date"
+								datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?>
+							</time>
+						</div>
+						<div class="article__contents">
+							<h2 class="article__title"><?php the_title(); ?></h2>
+							<p class="article__exerpt"><?php echo esc_html(get_the_excerpt()); ?></p>
+						</div>
+					</a>
+				</div>
 				<?php endwhile; ?>
-			</ul>
+			</div>
 			<?php else: ?>
 			<p>検索されたキーワードにマッチする記事はありませんでした</p>
 			<?php endif; ?>
