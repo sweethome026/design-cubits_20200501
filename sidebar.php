@@ -81,32 +81,23 @@
 
 	<section class="widget tags">
 		<h4 class="widget__ttl tags__ttl">タグ</h4>
-		<div class="tags__container">
-			<a href="#" class="tags__container__link">Illustrator</a>
-			<a href="#" class="tags__container__link">タグ名入る</a>
-			<a href="#" class="tags__container__link">タグ名入る</a>
-			<a href="#" class="tags__container__link">タグ名入る</a>
-			<a href="#" class="tags__container__link">タグ名入る</a>
-		</div>
-
 		<?php
-// パラメータを指定
-$args = array(
-	// タグ名順で指定
-    'orderby' => 'name',
-    // 昇順で指定
-    'order' => 'ASC'
-);
-$posttags = get_tags( $args );
-
-if ( $posttags ){
-	echo ' <div class="tags__container"> ';
-	foreach( $posttags as $tag ) {
-		echo '<a class="tags__container__link" href="'. get_tag_link( $tag->term_id ) . '">' . $tag->name . '</a>';
-	}
-	echo ' </div> ';
-}
-?>
+		// パラメータを指定
+		$args = array(
+			// タグ名順で指定
+			'orderby' => 'name',
+			// 昇順で指定
+			'order' => 'ASC'
+		);
+		$posttags = get_tags( $args );
+		if ( $posttags ){
+			echo ' <div class="tags__container"> ';
+			foreach( $posttags as $tag ) {
+				echo '<a class="tags__container__link" href="'. get_tag_link( $tag->term_id ) . '">' . $tag->name . '</a>';
+			}
+			echo ' </div> ';
+		}	
+		?>
 	</section><!-- //widget tags -->
 
 </aside><!-- //blog-sidebar -->

@@ -2073,6 +2073,11 @@ Page style
   padding-right: 0;
 }
 
+#blog .widget .category__lists .cat-item a {
+  display: block;
+  width: calc(100% - 25px);
+}
+
 #blog .widget .category__lists .cat-item a:before {
   content: "\f138";
   padding-right: 1rem;
@@ -2243,15 +2248,16 @@ Page style
 #blog .tags__container__link {
   display: inline-block;
   margin: 5px;
-  padding: 9px 16px;
-  height: 32px;
+  padding: 5px 14px;
   max-width: 100%;
+  font-size: 1.4rem;
+  line-height: 2rem;
   border-radius: 16px;
   background-color: #ebebeb;
 }
 
 #blog .tags__container__link:before {
-  margin-right: 9px;
+  margin-right: 5px;
   content: "\f02b";
   font-family: "Font Awesome 5 Free";
   font-size: 1.4rem;
