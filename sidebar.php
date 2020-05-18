@@ -63,13 +63,6 @@
 			wp_reset_postdata();
 			?>
 
-			<article class="recent-posts__article">
-				<a href="#">
-					<span class="recent-posts__article__info tag--illustrator">Illustrator</span>
-					<p class="recent-posts__article__title">タイトル入ります テキスト</p>
-					<time class="recent-posts__article__date">2000.00.00</time>
-				</a>
-			</article>
 		</div><!-- //recent-posts__container-->
 	</section><!-- //widget recent-posts -->
 
