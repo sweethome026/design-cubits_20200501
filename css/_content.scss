@@ -109,6 +109,7 @@ Page style
 
 			&__tag {
 				@include blog-tag;
+				margin-right: 16px;
 			}
 
 			.tag--illustrator {
@@ -1039,6 +1040,8 @@ Page style
 		}
 
 		&__footer {
+			margin-top: 100px;
+			
 			.pager {
 				display: flex;
 				justify-content: space-between;

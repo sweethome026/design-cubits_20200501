@@ -1432,6 +1432,7 @@ Page style
   text-align: center;
   line-height: 175%;
   color: #fff;
+  margin-right: 16px;
 }
 
 #top .blog__info .tag--illustrator {
@@ -2337,6 +2338,10 @@ Page style
 
 #blog .single-article__contents p + p {
   margin-top: 12px;
+}
+
+#blog .single-article__footer {
+  margin-top: 100px;
 }
 
 #blog .single-article__footer .pager {
