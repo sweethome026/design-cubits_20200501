@@ -1,10 +1,10 @@
 <?php
 /**
- * Template Name: ブログトップページのテンプレート
+ * Template Name: ブログトップページのテンプレート(home.php)
  */
 ?>
 
-<?php get_header(); ?>
+<?php get_header("category"); ?>
 
 <!-- main -->
 <main id="main" class="main">
@@ -14,11 +14,19 @@
 		<p class="pagettl__description">フリーランスとして働くWebデザイナーの備忘録・メモ</p>
 	</div>
 
-	<div class="breadcrumbs wrap">
+	<!-- <div class="breadcrumbs wrap">
 		<ol>
 			<li><a href="<?php echo esc_url(home_url('/')); ?>">HOME</a></li>
 			<li>ブログ</li>
 		</ol>
+	</div> -->
+	<!-- プラグイン「Breadcrumb NavXT」を使ったパンくずリスト -->
+	<div class="breadcrumbs wrap">
+		<?php
+		if ( function_exists( 'bcn_display' ) ) {
+		bcn_display();
+		}
+		?>
 	</div>
 
 	<!-- contents -->

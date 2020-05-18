@@ -14,6 +14,7 @@
 		<p class="pagettl__description">フリーランスとして働くWebデザイナーの備忘録・メモ</p>
 	</div>
 
+	<!-- プラグイン「Breadcrumb NavXT」を使ったパンくずリスト -->
 	<div class="breadcrumbs wrap">
 		<?php
 		if ( function_exists( 'bcn_display' ) ) {
