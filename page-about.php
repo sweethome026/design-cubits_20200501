@@ -12,12 +12,13 @@
 		<h1>design cubitsについて</h1>
 	</div>
 
-
+	<!-- プラグイン「Breadcrumb NavXT」を使ったパンくずリスト -->
 	<div class="breadcrumbs wrap">
-		<ol>
-			<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>">HOME</a></li>
-			<li>design cubitsについて</li>
-		</ol>
+		<?php
+		if ( function_exists( 'bcn_display' ) ) {
+		bcn_display();
+		}
+		?>
 	</div>
 
 

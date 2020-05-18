@@ -14,14 +14,6 @@
 		<p class="pagettl__description">フリーランスとして働くWebデザイナーの備忘録・メモ</p>
 	</div>
 
-	<div class="breadcrumbs wrap">
-		<ol>
-			<li><a href="<?php echo esc_url(home_url('/')); ?>">HOME</a></li>
-			<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>index.php?page_id=30">ブログ</a></li>
-			<li>検索結果</li>
-		</ol>
-	</div>
-
 	<!-- contents -->
 	<div id="contents" class="blog-contents wrap">
 		<section class="blog-main">
