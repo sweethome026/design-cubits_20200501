@@ -30,28 +30,29 @@
 				<a href="<?php the_permalink(); ?>">
 					<!-- 以下spanタグをecho -->
 					<?php
-						$this_categories = get_the_category();
-						$this_categories = $this_categories[0];
-						$parent_cat = $this_categories;
-						if ($this_categories->category_parent) { //category_parentは親カテゴリの「ID」
-							$parent_cat = get_category($this_categories->category_parent);
-						}
-						if ($this_categories) {
-							$this_category_color = get_field('catcolor', 'category_' . $parent_cat->term_id);
-							$this_category_name = $parent_cat->name;
-							echo '<span class="recent-posts__article__info" style="' . esc_attr('background:' . $this_category_color) . ';">';
-						}
-						?>
+					$this_categories = get_the_category();
+					$this_categories = $this_categories[0];
+					$parent_cat = $this_categories;
+					if ($this_categories->category_parent) { //category_parentは親カテゴリの「ID」
+						$parent_cat = get_category($this_categories->category_parent);
+					}
+					if ($this_categories) {
+						$this_category_color = get_field('catcolor', 'category_' . $parent_cat->term_id);
+						$this_category_name = $parent_cat->name;
+						echo '<span class="recent-posts__article__info" style="' . esc_attr('background:' . $this_category_color) . ';">';
+					}
+					?>
 					<!-- ↓ spanタグの中の文字 -->
 					<?php $cat = get_the_category();
-						$cat = $cat[0];
-						if ($cat->parent) {
-							$parent = get_category($cat->parent);
-							echo $parent->cat_name;
-						} else {
-							echo $cat->cat_name;
-						} ?>
+					$cat = $cat[0];
+					if ($cat->parent) {
+						$parent = get_category($cat->parent);
+						echo $parent->cat_name;
+					} else {
+						echo $cat->cat_name;
+					} ?>
 					</span>
+
 					<p class="recent-posts__article__title"><?php the_title(); ?></p>
 					<time class="recent-posts__article__date"
 						datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>

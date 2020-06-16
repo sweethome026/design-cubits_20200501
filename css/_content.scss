@@ -850,6 +850,10 @@ Page style
 				padding: 25px 0;
 				@include dashed-line($lc:#ccc,$lp:left bottom);
 
+				a {
+					display: block;
+				}
+
 				&__info {
 					@include blog-tag;
 				}

@@ -254,8 +254,7 @@ button {
   padding: 0;
   background-color: transparent;
   border: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
   text-shadow: none;
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -297,8 +296,7 @@ Template style
 ** outline
 ==================================================*/
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .pc {
@@ -352,16 +350,12 @@ body {
 }
 
 .header .header-logo a {
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
   display: block;
 }
 
 .header .header-logo a:hover {
-  -webkit-transform: scale(1.03);
-          transform: scale(1.03);
+  transform: scale(1.03);
 }
 
 .header .header-logo img {
@@ -386,30 +380,25 @@ body {
   border-radius: 1.5px;
   background: #fff;
   position: absolute;
-  -webkit-transition: all linear 0.5s;
   transition: all linear 0.5s;
 }
 
 .header #menuBtn span:nth-child(1) {
   top: 21px;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .opened .header #menuBtn span:nth-child(1) {
   top: 22px;
-  -webkit-transform-origin: 0 50%;
-          transform-origin: 0 50%;
-  -webkit-transform: translateX(-50%) rotate(45deg);
-          transform: translateX(-50%) rotate(45deg);
+  transform-origin: 0 50%;
+  transform: translateX(-50%) rotate(45deg);
 }
 
 .header #menuBtn span:nth-child(2) {
   top: 29px;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .opened .header #menuBtn span:nth-child(2) {
@@ -419,29 +408,20 @@ body {
 .header #menuBtn span:nth-child(3) {
   bottom: 20px;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .opened .header #menuBtn span:nth-child(3) {
   bottom: 21px;
-  -webkit-transform-origin: 0 50%;
-          transform-origin: 0 50%;
-  -webkit-transform: translateX(-50%) rotate(-45deg);
-          transform: translateX(-50%) rotate(-45deg);
+  transform-origin: 0 50%;
+  transform: translateX(-50%) rotate(-45deg);
 }
 
 @media screen and (min-width: 1025px) {
   .header.fixed .header__container {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: space-between;
+    align-items: center;
     margin: 0 auto;
     max-width: 1100px;
   }
@@ -451,15 +431,11 @@ body {
     height: 46px;
   }
   .header.fixed .header-logo a {
-    -webkit-transition: -webkit-transform 0.5s;
-    transition: -webkit-transform 0.5s;
     transition: transform 0.5s;
-    transition: transform 0.5s, -webkit-transform 0.5s;
     display: block;
   }
   .header.fixed .header-logo a:hover {
-    -webkit-transform: scale(1.03);
-            transform: scale(1.03);
+    transform: scale(1.03);
   }
   .header.fixed .header-logo img {
     width: auto;
@@ -472,8 +448,6 @@ body {
 ** gnav
 ==================================================*/
 .gnav {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   height: 90px;
 }
@@ -481,12 +455,8 @@ body {
 .gnav__list {
   margin-right: 0;
   margin-left: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .gnav__list__item {
@@ -517,24 +487,17 @@ body {
 @media screen and (min-width: 1025px) {
   .gnav__list__item a {
     padding: 0 20px;
-    -webkit-transition: background-color 0.4s;
     transition: background-color 0.4s;
   }
   .gnav__list__item a:hover {
     background-color: rgba(159, 221, 255, 0.4);
   }
   .fixed .gnav {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
     height: 90px;
   }
   .fixed .gnav .gnav__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     line-height: 90px;
   }
@@ -573,15 +536,9 @@ body {
 }
 
 .main .pagettl {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   height: 170px;
   background-repeat: no-repeat;
   background-position: center center;
@@ -598,11 +555,8 @@ body {
 
 .main .breadcrumbs ol {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   margin-top: 30px;
 }
 
@@ -624,8 +578,7 @@ body {
   content: "\f105";
   font-family: "Font Awesome 5 Free";
   font-weight: bold;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   position: absolute;
   left: 46px;
 }
@@ -644,8 +597,7 @@ body {
 
 .main .breadcrumbs span {
   position: relative;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   margin-top: 30px;
 }
 
@@ -787,6 +739,8 @@ body {
 .main table.outline {
   margin-top: 50px;
   background-image: -webkit-gradient(linear, left top, right top, from(#ccc), color-stop(57.142%, #ccc), color-stop(42.858%, transparent), to(transparent));
+  background-image: -webkit-linear-gradient(left, #ccc, #ccc 57.142%, transparent 42.858%, transparent 100%);
+  background-image: -o-linear-gradient(left, #ccc, #ccc 57.142%, transparent 42.858%, transparent 100%);
   background-image: linear-gradient(to right, #ccc, #ccc 57.142%, transparent 42.858%, transparent 100%);
   background-size: 7px 1px;
   background-repeat: repeat-x;
@@ -795,6 +749,8 @@ body {
 
 .main table.outline tr {
   background-image: -webkit-gradient(linear, left top, right top, from(#ccc), color-stop(57.142%, #ccc), color-stop(42.858%, transparent), to(transparent));
+  background-image: -webkit-linear-gradient(left, #ccc, #ccc 57.142%, transparent 42.858%, transparent 100%);
+  background-image: -o-linear-gradient(left, #ccc, #ccc 57.142%, transparent 42.858%, transparent 100%);
   background-image: linear-gradient(to right, #ccc, #ccc 57.142%, transparent 42.858%, transparent 100%);
   background-size: 7px 1px;
   background-repeat: repeat-x;
@@ -888,7 +844,6 @@ body {
   color: #fff;
   text-align: center;
   text-decoration: none;
-  -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
 
@@ -913,7 +868,6 @@ body {
   text-align: center;
   text-decoration: none;
   font-weight: bold;
-  -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
 
@@ -940,13 +894,11 @@ body {
 #pagetop a {
   width: 100%;
   height: 100%;
-  -webkit-transition: opacity 0.6s;
   transition: opacity 0.6s;
 }
 
 #pagetop a:hover {
   opacity: 0.6;
-  -webkit-transition: opacity 0.4s;
   transition: opacity 0.4s;
 }
 
@@ -976,11 +928,8 @@ body {
 }
 
 .footer__menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   padding: 40px 0;
 }
 
@@ -991,12 +940,8 @@ body {
 }
 
 .footer__under {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   padding: 15px 0;
 }
 
@@ -1057,7 +1002,6 @@ Page style
 ** header
 ==================================================*/
   .header {
-    -webkit-transition: left linear 0.5s;
     transition: left linear 0.5s;
     background: #9fdde3;
     height: 60px;
@@ -1067,22 +1011,18 @@ Page style
     margin-left: 0;
   }
   .header .header-logo a {
-    -webkit-transition: opacity 0.6s;
     transition: opacity 0.6s;
   }
   .header .header-logo a:hover {
-    -webkit-transform: none;
-            transform: none;
+    transform: none;
     opacity: 0.8;
-    -webkit-transition: opacity 0.4s;
     transition: opacity 0.4s;
   }
   .header .header-logo img {
     position: absolute;
     top: 50%;
     left: 10px;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
+    transform: translateY(-50%);
     height: 32px;
   }
   .header picture {
@@ -1108,7 +1048,6 @@ Page style
     background-repeat: no-repeat;
     background-position: left 340px;
     background-size: contain;
-    -webkit-transition: right linear 0.5s;
     transition: right linear 0.5s;
   }
   .opened .gnav {
@@ -1118,18 +1057,13 @@ Page style
     position: relative;
     top: 60px;
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch;
+    flex-direction: column;
+    align-items: stretch;
     margin: 0 20px;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(244, 244, 244, 0.8)), color-stop(57.142%, rgba(244, 244, 244, 0.8)), color-stop(42.858%, transparent), to(transparent));
+    background-image: -webkit-linear-gradient(left, rgba(244, 244, 244, 0.8), rgba(244, 244, 244, 0.8) 57.142%, transparent 42.858%, transparent 100%);
+    background-image: -o-linear-gradient(left, rgba(244, 244, 244, 0.8), rgba(244, 244, 244, 0.8) 57.142%, transparent 42.858%, transparent 100%);
     background-image: linear-gradient(to right, rgba(244, 244, 244, 0.8), rgba(244, 244, 244, 0.8) 57.142%, transparent 42.858%, transparent 100%);
     background-size: 7px 1px;
     background-repeat: repeat-x;
@@ -1138,6 +1072,8 @@ Page style
   .gnav .gnav__list__item {
     height: 61px;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(244, 244, 244, 0.8)), color-stop(57.142%, rgba(244, 244, 244, 0.8)), color-stop(42.858%, transparent), to(transparent));
+    background-image: -webkit-linear-gradient(left, rgba(244, 244, 244, 0.8), rgba(244, 244, 244, 0.8) 57.142%, transparent 42.858%, transparent 100%);
+    background-image: -o-linear-gradient(left, rgba(244, 244, 244, 0.8), rgba(244, 244, 244, 0.8) 57.142%, transparent 42.858%, transparent 100%);
     background-image: linear-gradient(to right, rgba(244, 244, 244, 0.8), rgba(244, 244, 244, 0.8) 57.142%, transparent 42.858%, transparent 100%);
     background-size: 7px 1px;
     background-repeat: repeat-x;
@@ -1372,11 +1308,8 @@ Page style
 }
 
 #top .services__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   margin-top: 0;
 }
 
@@ -1411,6 +1344,8 @@ Page style
 #top .blog__article {
   padding: 25px 10px;
   background-image: -webkit-gradient(linear, left top, right top, from(#ccc), color-stop(57.142%, #ccc), color-stop(42.858%, transparent), to(transparent));
+  background-image: -webkit-linear-gradient(left, #ccc, #ccc 57.142%, transparent 42.858%, transparent 100%);
+  background-image: -o-linear-gradient(left, #ccc, #ccc 57.142%, transparent 42.858%, transparent 100%);
   background-image: linear-gradient(to right, #ccc, #ccc 57.142%, transparent 42.858%, transparent 100%);
   background-size: 7px 1px;
   background-repeat: repeat-x;
@@ -1418,8 +1353,6 @@ Page style
 }
 
 #top .blog__info {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -1536,12 +1469,8 @@ Page style
 }
 
 #about .concept__profilebox__contents {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   margin-right: auto;
   margin-left: auto;
   width: 45.6%;
@@ -1571,11 +1500,8 @@ Page style
 ** services
 ==================================================*/
 #services .skill__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   margin-top: 0;
 }
 
@@ -1608,12 +1534,8 @@ Page style
 }
 
 #services .strength__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 #services .strength__box {
@@ -1645,11 +1567,8 @@ Page style
 }
 
 #services .illustrations__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   margin-top: 18px;
 }
 
@@ -1724,8 +1643,6 @@ Page style
 }
 
 #services .flow__list__contentbox {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-top: 0;
   height: 160px;
@@ -1790,16 +1707,11 @@ Page style
 }
 
 #blog .blog-contents {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
 #blog .pagettl {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 #blog .pagettl__ttl {
@@ -1831,6 +1743,8 @@ Page style
 #blog .blog-main .article {
   padding: 25px 0;
   background-image: -webkit-gradient(linear, left top, right top, from(#ccc), color-stop(57.142%, #ccc), color-stop(42.858%, transparent), to(transparent));
+  background-image: -webkit-linear-gradient(left, #ccc, #ccc 57.142%, transparent 42.858%, transparent 100%);
+  background-image: -o-linear-gradient(left, #ccc, #ccc 57.142%, transparent 42.858%, transparent 100%);
   background-image: linear-gradient(to right, #ccc, #ccc 57.142%, transparent 42.858%, transparent 100%);
   background-size: 7px 1px;
   background-repeat: repeat-x;
@@ -1838,8 +1752,6 @@ Page style
 }
 
 #blog .blog-main .article__info {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -1909,15 +1821,11 @@ Page style
 }
 
 #blog .blog-main .pagenation {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-top: 80px;
   margin-right: auto;
   margin-left: auto;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 #blog .blog-main .pagenation a, #blog .blog-main .pagenation span {
@@ -1956,15 +1864,11 @@ Page style
 }
 
 #blog .blog-main .wp-pagenavi {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-top: 80px;
   margin-right: auto;
   margin-left: auto;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 #blog .blog-main .wp-pagenavi a, #blog .blog-main .wp-pagenavi span {
@@ -2160,10 +2064,16 @@ Page style
   margin-top: 5px;
   padding: 25px 0;
   background-image: -webkit-gradient(linear, left top, right top, from(#ccc), color-stop(57.142%, #ccc), color-stop(42.858%, transparent), to(transparent));
+  background-image: -webkit-linear-gradient(left, #ccc, #ccc 57.142%, transparent 42.858%, transparent 100%);
+  background-image: -o-linear-gradient(left, #ccc, #ccc 57.142%, transparent 42.858%, transparent 100%);
   background-image: linear-gradient(to right, #ccc, #ccc 57.142%, transparent 42.858%, transparent 100%);
   background-size: 7px 1px;
   background-repeat: repeat-x;
   background-position: left bottom;
+}
+
+#blog .widget .recent-posts__article a {
+  display: block;
 }
 
 #blog .widget .recent-posts__article__info {
@@ -2345,12 +2255,8 @@ Page style
 }
 
 #blog .single-article__footer .pager {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   width: 100%;
 }
 
@@ -2367,7 +2273,6 @@ Page style
   background: #68c4cd;
   color: #fff;
   text-decoration: none;
-  -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
 
@@ -2440,8 +2345,7 @@ Page style
   border: 1px solid #cccccc;
   background: #f8f5ee;
   border-radius: 10px;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
   font-weight: 400;
   line-height: 140%;
 }
@@ -2772,10 +2676,7 @@ Page style
 ** blog
 ==================================================*/
   #blog .blog-contents {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   #blog .blog-main {
     width: 100%;
@@ -2785,4 +2686,3 @@ Page style
     width: 100%;
   }
 }
-/*# sourceMappingURL=style.css.map */
