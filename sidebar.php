@@ -27,9 +27,8 @@
 			foreach ($postslist as $post) :  /* ループ開始 */
 				setup_postdata($post); ?>
 			<article class="recent-posts__article">
-				<a href="<?php the_permalink(); ?>">
-					<!-- 以下spanタグをecho -->
-					<?php
+				<!-- 以下spanタグをecho -->
+				<?php
 					$this_categories = get_the_category();
 					$this_categories = $this_categories[0];
 					$parent_cat = $this_categories;
@@ -42,17 +41,13 @@
 						echo '<span class="recent-posts__article__info" style="' . esc_attr('background:' . $this_category_color) . ';">';
 					}
 					?>
-					<!-- ↓ spanタグの中の文字 -->
-					<?php $cat = get_the_category();
-					$cat = $cat[0];
-					if ($cat->parent) {
-						$parent = get_category($cat->parent);
-						echo $parent->cat_name;
-					} else {
-						echo $cat->cat_name;
-					} ?>
-					</span>
 
+
+
+				<?php the_category(' '); ?>
+				</span>
+
+				<a href="<?php the_permalink(); ?>">
 					<p class="recent-posts__article__title"><?php the_title(); ?></p>
 					<time class="recent-posts__article__date"
 						datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>

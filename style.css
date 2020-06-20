@@ -2087,6 +2087,12 @@ Page style
   color: #fff;
 }
 
+#blog .widget .recent-posts__article__info a {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 #blog .widget .recent-posts__article__title {
   font-size: 1.6rem;
   margin-top: 15px;

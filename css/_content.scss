@@ -856,6 +856,11 @@ Page style
 
 				&__info {
 					@include blog-tag;
+					a {
+						white-space: nowrap;
+						overflow: hidden;
+						text-overflow: ellipsis;
+					}
 				}
 
 				&__title {
