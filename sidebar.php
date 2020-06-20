@@ -41,9 +41,6 @@
 						echo '<span class="recent-posts__article__info" style="' . esc_attr('background:' . $this_category_color) . ';">';
 					}
 					?>
-
-
-
 				<?php the_category(' '); ?>
 				</span>
 

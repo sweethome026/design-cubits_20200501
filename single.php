@@ -27,34 +27,27 @@
 				<header class="single-article__header">
 					<div class="article__header__info article__info">
 						<!-- カテゴリーは配列で返ってくる。
-                  まずget_the_category();で投稿が分類されているカテゴリーを配列で取得。
-                  $this_categories[0];で、返ってきたカテゴリー情報の「1番目の情報」を取得している。
-                  -->
+						まずget_the_category();で投稿が分類されているカテゴリーを配列で取得。
+						$this_categories[0];で、返ってきたカテゴリー情報の「1番目の情報」を取得している。
+						-->
 						<?php $this_categories = get_the_category();
-                $this_categories = $this_categories[0];
-                // ↓$this_categoriesの中のcategory_parentという変数の値を取り出そうとしている。category_parentは(整数) 親カテゴリーの ID - 親がなければ 0 が入る（parent にも同じ値が入る）。
-                $parent_cat = $this_categories;
-                if ($this_categories->category_parent) { //category_parentは親カテゴリの「ID」
-                  $parent_cat = get_category($this_categories->category_parent);
-                }
-                if ($this_categories) {
-                  $this_category_color = get_field('catcolor', 'category_' . $parent_cat->term_id);
-                  $this_category_name = $parent_cat->name;
-                  echo '<a class="article__info__tag" style="' . esc_attr('background:' . $this_category_color) . ';">';
-                }
-                ?>
-						<?php $cat = get_the_category();
-                $cat = $cat[0];
-                if ($cat->parent) {
-                  $parent = get_category($cat->parent);
-                  echo $parent->cat_name;
-                } else {
-                  echo $cat->cat_name;
-                } ?>
-						<!--テンプレートタグ the_category();を使うと、ul>li>aが出力されるので、カテゴリータイトルのみを取得。-->
-						</a>
+						$this_categories = $this_categories[0];
+						// ↓$this_categoriesの中のcategory_parentという変数の値を取り出そうとしている。category_parentは(整数) 親カテゴリーの ID - 親がなければ 0 が入る（parent にも同じ値が入る）。
+						$parent_cat = $this_categories;
+						if ($this_categories->category_parent) { //category_parentは親カテゴリの「ID」
+						$parent_cat = get_category($this_categories->category_parent);
+						}
+						if ($this_categories) {
+						$this_category_color = get_field('catcolor', 'category_' . $parent_cat->term_id);
+						$this_category_name = $parent_cat->name;
+						echo '<span class="article__info__tag" style="' . esc_attr('background:' . $this_category_color) . ';">';
+						}
+						?>
+						<?php the_category(' '); ?>
+						</span>
 
-						<time class="article__info__date">2000.00.00</time>
+						<time class="article__info__date"
+							datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
 					</div>
 					<h1 class="single-article__header__heading">
 						<?php the_title(); ?>

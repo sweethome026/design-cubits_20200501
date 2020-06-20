@@ -534,7 +534,7 @@ Page style
 					margin-right: 16px;
 				}
 	
-				&__date　{
+				&__date {
 					line-height: 175%;
 					color: $color-txt02;
 				}
@@ -856,6 +856,7 @@ Page style
 
 				&__info {
 					@include blog-tag;
+					max-width: 200px;
 					a {
 						white-space: nowrap;
 						overflow: hidden;
