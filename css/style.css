@@ -1092,7 +1092,7 @@ Page style
 ** main common
 ==================================================*/
   .main {
-    margin-top: 60px;
+    margin-top: 0;
   }
   .main table.outline tr {
     display: block;

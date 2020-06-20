@@ -39,10 +39,9 @@
 
 				<!-- 記事データの取得 -->
 				<article id="post-<?php the_ID(); ?>" <?php post_class('article'); ?>>
-					<a class="blog__linkbox" href="<?php the_permalink(); ?>">
-						<div class="article__info">
-							<!-- 以下spanタグをecho -->
-							<?php
+					<div class="article__info">
+						<!-- 以下spanタグをecho -->
+						<?php
 					$this_categories = get_the_category();
 					$this_categories = $this_categories[0];
 					$parent_cat = $this_categories;
@@ -55,22 +54,13 @@
 						echo '<span class="article__info__tag" style="' . esc_attr('background:' . $this_category_color) . ';">';
 					}
 					?>
-							<!-- ↓ spanタグの中の文字 -->
-							<?php $cat = get_the_category();
-					$cat = $cat[0];
-					if ($cat->parent) {
-						$parent = get_category($cat->parent);
-						echo $parent->cat_name;
-					} else {
-						echo $cat->cat_name;
-					} ?>
-							<!--テンプレートタグ the_category();を使うと、ul>li>aが出力されるので、カテゴリータイトルのみを取得。-->
-							<?php if ($this_categories) { ?>
-							</span>
-							<?php } ?>
-							<time class="article__info__date"
-								datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
-						</div>
+						<?php the_category(' '); ?>
+
+						</span>
+						<time class="article__info__date"
+							datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
+					</div>
+					<a class="blog__linkbox" href="<?php the_permalink(); ?>">
 						<div class="article__contents">
 							<h2 class="article__title"><?php the_title(); ?></h2>
 							<p class="article__exerpt"><?php echo esc_html(get_the_excerpt()); ?></p>
