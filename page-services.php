@@ -163,7 +163,7 @@
 				<li class="instructor__list__item">詳しくはお問い合わせください。</li>
 			</ul>
 			<div class="btn btn--white">
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>index.php?page_id=119">">お問い合わせフォームへ</a>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>index.php?page_id=119">お問い合わせフォームへ</a>
 			</div>
 		</section><!-- //instructor -->
 
