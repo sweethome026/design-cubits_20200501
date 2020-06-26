@@ -117,7 +117,7 @@ $color-border: #cccccc;
 
 //blog-tag
 @mixin blog-tag {
-  display: block;
+  display: inline-block;
   min-width: 110px;
   padding-left: 5px;
   padding-right: 5px;

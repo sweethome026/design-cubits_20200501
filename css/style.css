@@ -546,7 +546,6 @@ body {
 }
 
 .main .pagettl h1 {
-  padding: 0 5%;
   text-align: center;
   font-size: 2.8rem;
   font-weight: bold;
@@ -1092,7 +1091,7 @@ Page style
 ** main common
 ==================================================*/
   .main {
-    margin-top: 0;
+    margin-top: 60px;
   }
   .main table.outline tr {
     display: block;
@@ -1357,7 +1356,7 @@ Page style
 }
 
 #top .blog__info__tag {
-  display: block;
+  display: inline-block;
   min-width: 110px;
   padding-left: 5px;
   padding-right: 5px;
@@ -1755,7 +1754,7 @@ Page style
 }
 
 #blog .blog-main .article__info__tag {
-  display: block;
+  display: inline-block;
   min-width: 110px;
   padding-left: 5px;
   padding-right: 5px;
@@ -2075,7 +2074,7 @@ Page style
 }
 
 #blog .widget .recent-posts__article__info {
-  display: block;
+  display: inline-block;
   min-width: 110px;
   padding-left: 5px;
   padding-right: 5px;
@@ -2319,14 +2318,6 @@ Page style
 #contact .contact-contents__head__attention {
   margin-top: 50px;
   color: #ff6f61;
-}
-
-#contact .sent {
-  text-align: center;
-}
-
-#contact .sent__headline {
-  margin-top: 80px;
 }
 
 #contact .wpcf7 {

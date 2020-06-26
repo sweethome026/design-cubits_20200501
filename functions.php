@@ -109,13 +109,29 @@ function my_pagenavi($args = array())
 ==================================================
 */
 
-add_action( 'wp_footer', 'add_thanks_page' );
-function add_thanks_page() {
-echo <<< EOD
-<script>
-document.addEventListener( 'wpcf7mailsent', function( event ) {
-  location = 'http://designcubits20200503.local/thanks/'; /* 遷移先のURL */
-}, false );
-</script>
-EOD;
+/** * contact form 7のjsとcssを停止（標準では全ページでcontactform7のcss/jsが読み込まれるから） */
+function my_remove_cf7_js_css() {
+add_filter( 'wpcf7_load_js', '__return_false' );
+add_filter( 'wpcf7_load_css', '__return_false' );
 }
+add_action( 'after_setup_theme', 'my_remove_cf7_js_css' );
+
+
+/*** contact form 7のjsとcssを読み込み */
+function my_enable_cf7_js_css() { /** * スラッグが「contact」のページだけ読み込み */
+if( is_page( 'contact' ) || is_page( 'top' ) || is_page( 'about' ) ||is_page( 'services' ) || is_page( 'privacy-policy' ) || is_page( 'blog' ) || is_page( 'thanks' ) || is_page( '404-not-found' ) || is_page( 'page' )) {
+if ( function_exists( 'wpcf7_enqueue_scripts' ) ) { wpcf7_enqueue_scripts(); }
+if ( function_exists( 'wpcf7_enqueue_styles' ) ) { wpcf7_enqueue_styles(); } }
+} add_action( 'wp_enqueue_scripts', 'my_enable_cf7_js_css' );
+
+// /** thanksページへ遷移 */
+// add_action( 'wp_footer', 'add_thanks_page' );
+// function add_thanks_page() {
+// echo <<< EOD
+// <script>
+// document.addEventListener( 'wpcf7mailsent', function( event ) {
+//   location = 'https://design-cubits.com/test_20200624/?page_id=128'; /* 遷移先のURL */
+// }, false );
+// </script>
+// EOD;
+// }
