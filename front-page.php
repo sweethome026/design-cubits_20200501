@@ -107,14 +107,14 @@
           setup_postdata($post); ?>
 				<!-- 記事データの取得 -->
 				<article id="post-<?php the_ID(); ?>" <?php post_class('blog__article'); ?>>
-					<a class="blog__linkbox" href="<?php the_permalink(); ?>">
-						<div class="blog__info">
-							<!-- カテゴリーは配列1番目をとってくる宣言-->
-							<?php
+
+					<div class="blog__info">
+						<!-- カテゴリーは配列1番目をとってくる宣言-->
+						<?php
                 $this_categories = get_the_category();
                 $this_categories = $this_categories[0];
                 $parent_cat = $this_categories;
-                if ($this_categories->category_parent　) { //category_parentは親カテゴリの「ID」
+                if ($this_categories->category_parent) { //category_parentは親カテゴリの「ID」
                   $parent_cat = get_category($this_categories->category_parent);
                 }
                 if ($this_categories) {
@@ -123,19 +123,12 @@
                   echo '<span class="blog__info__tag" style="' . esc_attr('background:' . $this_category_color) . ';">';
                 }
                 ?>
-							<?php $cat = get_the_category();
-                $cat = $cat[0];
-                if ($cat->parent) {
-                  $parent = get_category($cat->parent);
-                  echo $parent->cat_name;
-                } else {
-                  echo $cat->cat_name;
-                } ?>
-							<!--テンプレートタグ the_category();を使うと、ul>li>aが出力されるので、カテゴリータイトルのみを取得。-->
-							</span>
-							<time class="blog__info__date"
-								datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
-						</div>
+						<?php the_category(' '); ?>
+						</span>
+						<time class="blog__info__date"
+							datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
+					</div>
+					<a class="blog__linkbox" href="<?php the_permalink(); ?>">
 						<h2 class="blog__title"><?php the_title(); ?></h2>
 						<p class="blog__exerpt"><?php echo esc_html( get_the_excerpt() ); ?></p>
 					</a>
