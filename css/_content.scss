@@ -1039,12 +1039,32 @@ Page style
 					margin-top: 24px;
 				}
 			}
-
-
 			
 			p {
 				+ p {
 					margin-top: 12px;
+				}
+			}
+
+			//本サイトで設定されていたクラス名にスタイルを当てる
+			.table {
+				table-layout: fixed;
+				width: 100%;
+				border: 1px solid $color-border;
+
+
+				tr,th,td {
+					border: 1px solid $color-border;
+					padding: 0.4em;
+				}
+
+				
+				th {
+					background-color: $color-bg02;
+					text-align: center;
+				}
+
+				tr {
 				}
 			}
 		}

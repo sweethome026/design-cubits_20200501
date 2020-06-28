@@ -2253,6 +2253,22 @@ Page style
   margin-top: 12px;
 }
 
+#blog .single-article__contents .table {
+  table-layout: fixed;
+  width: 100%;
+  border: 1px solid #cccccc;
+}
+
+#blog .single-article__contents .table tr, #blog .single-article__contents .table th, #blog .single-article__contents .table td {
+  border: 1px solid #cccccc;
+  padding: 0.4em;
+}
+
+#blog .single-article__contents .table th {
+  background-color: #ebebeb;
+  text-align: center;
+}
+
 #blog .single-article__footer {
   margin-top: 100px;
 }
