@@ -253,6 +253,16 @@ Page style
 		margin-right: 0;
 	}
 
+	.single-article {
+		&__contents {
+			table {
+				tr,th,td {
+					padding: .4em .4em;
+				}
+			}
+		}
+	}
+
 	.blog-sidebar {
 		width: 100%;
 	}

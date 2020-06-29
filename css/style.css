@@ -2261,7 +2261,7 @@ Page style
 
 #blog .single-article__contents table tr, #blog .single-article__contents table th, #blog .single-article__contents table td {
   border: 1px solid #cccccc;
-  padding: 0.4em;
+  padding: .4em .8em;
 }
 
 #blog .single-article__contents table th {
@@ -2692,6 +2692,9 @@ Page style
   #blog .blog-main {
     width: 100%;
     margin-right: 0;
+  }
+  #blog .single-article__contents table tr, #blog .single-article__contents table th, #blog .single-article__contents table td {
+    padding: .4em .4em;
   }
   #blog .blog-sidebar {
     width: 100%;
