@@ -884,6 +884,10 @@ Page style
 		}
 
 	}
+	.widget.ad {
+		text-align: center;
+
+	}
 
 	.search {
 		&__ttl {
@@ -980,8 +984,14 @@ Page style
 				font-weight: bold;
 				border-bottom: 4px solid #68c4cd;
 			}
+			+ .ad {
+				margin-top: 40px;
+				+ .single-article__contents {
+					margin-top: 40px;
+				}
+			}
 
-			+ * {
+			+ .single-article__contents {
 				margin-top: 80px;
 
 			}
@@ -1042,8 +1052,11 @@ Page style
 			
 			p {
 				+ p {
-					margin-top: 12px;
+					margin-top: 1.8em;
 				}
+			}
+			img {
+				margin-top: 1.8em;
 			}
 
 			//本サイトで設定されていたクラス名にスタイルを当てる
@@ -1065,6 +1078,24 @@ Page style
 				}
 
 				tr {
+				}
+			}
+
+			ul {
+				li {
+					&:before {
+						position: absolute;
+						top: 0;
+						left: 0;
+						content: "\f111";
+						font-family: "Font Awesome 5 Free";
+						font-size: 80%;
+						font-weight: 900;
+						color: $color-pagettl;
+					}
+					a {
+						
+					}
 				}
 			}
 		}
@@ -1123,6 +1154,10 @@ Page style
 				}
 			}
 		}
+
+	}
+	.ad {
+		margin-top: 40px;
 	}
 }
 
