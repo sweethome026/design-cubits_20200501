@@ -26,16 +26,9 @@
 			?>
 		</title>
 		<?php wp_head(); ?>
-
-
 		<!-- InstanceEndEditable -->
 		<!-- InstanceBeginEditable name="head" -->
 		<!-- InstanceEndEditable -->
-		<script>
-		document.addEventListener('wpcf7mailsent', function(event) {
-			location = 'https://design-cubits.com/test_20200624/?page_id=128';
-		}, false);
-		</script>
 	</head>
 
 	<body <?php my_body_id(); ?>>

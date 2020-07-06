@@ -122,29 +122,6 @@
 			// 昇順で指定
 			'order' => 'ASC'
 		);
-		$tags = get_tags();
-		$html = '<div class="tags__container">';
-		foreach( $tags as $tag ) { /* ループ開始 */
-			$tag_link = get_tag_link( $tag->term_id );
-			
-			$html .= "<a href='{$tag_link}' title='{$tag->name} Tag' class='{$tag->slug}'>";
-			$html .= "{$tag->name}</a>";
-		}
-		$html .= '</div>';
-		echo $html;
-		?>
-	</section><!-- //widget tags -->
-
-	<section class="widget tags">
-		<h4 class="widget__ttl tags__ttl">タグ</h4>
-		<?php
-		// パラメータを指定
-		$args = array(
-			// タグ名順で指定
-			'orderby' => 'name',
-			// 昇順で指定
-			'order' => 'ASC'
-		);
 		$posttags = get_tags( $args );
 		if ( $posttags ){
 			echo ' <div class="tags__container"> ';
