@@ -1361,7 +1361,12 @@ Page style
   text-align: center;
   line-height: 175%;
   color: #fff;
+  transition: opacity 0.4s;
   margin-right: 16px;
+}
+
+#top .blog__info__tag:hover {
+  opacity: 0.7;
 }
 
 #top .blog__info__tag a {
@@ -1372,7 +1377,6 @@ Page style
 
 #top .blog__info__tag a:hover {
   color: #fff;
-  opacity: 0.8;
 }
 
 #top .blog__info .tag--illustrator {
@@ -1768,7 +1772,12 @@ Page style
   text-align: center;
   line-height: 175%;
   color: #fff;
+  transition: opacity 0.4s;
   margin-right: 16px;
+}
+
+#blog .blog-main .article__info__tag:hover {
+  opacity: 0.7;
 }
 
 #blog .blog-main .article__info__tag a {
@@ -1779,7 +1788,6 @@ Page style
 
 #blog .blog-main .article__info__tag a:hover {
   color: #fff;
-  opacity: 0.8;
 }
 
 #blog .blog-main .article__info__date {
@@ -2097,7 +2105,12 @@ Page style
   text-align: center;
   line-height: 175%;
   color: #fff;
+  transition: opacity 0.4s;
   max-width: 200px;
+}
+
+#blog .widget .recent-posts__article__info:hover {
+  opacity: 0.7;
 }
 
 #blog .widget .recent-posts__article__info a {
@@ -2108,7 +2121,6 @@ Page style
 
 #blog .widget .recent-posts__article__info a:hover {
   color: #fff;
-  opacity: 0.8;
 }
 
 #blog .widget .recent-posts__article__info a {
