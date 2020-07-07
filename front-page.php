@@ -92,7 +92,10 @@
 				</li>
 			</ul>
 			<div class="btn">
-				<a href="/index.php?page_id=67">サービス紹介を見る</a>
+				<?php
+							$page = get_page_by_path('services');
+							?>
+				<a href="<?php echo esc_url(get_permalink($page -> ID)); ?>">サービス紹介を見る</a>
 			</div>
 		</section><!-- //services -->
 
@@ -140,7 +143,10 @@
 
 			</div><!-- //blog__container -->
 			<div class="btn">
-				<a href="<?php echo esc_url(home_url('/')); ?>index.php?page_id=30">ブログを見る</a>
+				<?php
+							$page = get_page_by_path('blog');
+							?>
+				<a href="<?php echo esc_url(get_permalink($page -> ID)); ?>">ブログを見る</a>
 			</div>
 		</section><!-- //blog -->
 
@@ -149,7 +155,10 @@
 			<p class="lh-l lh-l--white">お仕事のご依頼・ご相談、その他<br class="contact__br__sp">お問い合わせを受け付けております。<br>まずはお気軽にご連絡ください。
 			</p>
 			<div class="btn btn--white">
-				<a href="<?php echo esc_url(home_url('/')); ?>index.php?page_id=119">お問い合わせフォームへ</a>
+				<?php
+							$page = get_page_by_path('contact');
+							?>
+				<a href="<?php echo esc_url(get_permalink($page -> ID)); ?>">お問い合わせフォームへ</a>
 			</div>
 		</section><!-- //contact -->
 	</div>

@@ -40,17 +40,30 @@
 				<nav id="gnav" class="gnav">
 					<ul class="gnav__list">
 						<li class="gnav__list__item">
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>index.php?page_id=67">サービス紹介</a>
+							<?php
+							$page = get_page_by_path('services');
+							?>
+							<a href="<?php echo esc_url(get_permalink($page -> ID)); ?>">
+								サービス紹介</a>
 						</li>
 						<li class="gnav__list__item">
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>index.php?page_id=41">design
+							<?php
+							$page = get_page_by_path('about');
+							?>
+							<a href="<?php echo esc_url(get_permalink($page -> ID)); ?>">design
 								cubitsについて</a>
 						</li>
 						<li class="gnav__list__item">
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>index.php?page_id=30">ブログ</a>
+							<?php
+							$page = get_page_by_path('blog');
+							?>
+							<a href="<?php echo esc_url(get_permalink($page -> ID)); ?>">ブログ</a>
 						</li>
 						<li class="gnav__list__item">
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>index.php?page_id=119">お問い合わせ</a>
+							<?php
+							$page = get_page_by_path('contact');
+							?>
+							<a href="<?php echo esc_url(get_permalink($page -> ID)); ?>">お問い合わせ</a>
 						</li>
 					</ul>
 				</nav>

@@ -12,21 +12,35 @@
     	<div class="footer__content wrap">
     		<ul class="footer__menu">
     			<li class="footer__menu__item txt-link" class="">
-    				<a href="<?php echo esc_url( home_url( '/' ) ); ?>index.php?page_id=67">サービス紹介</a>
+    				<?php
+							$page = get_page_by_path('services');
+							?>
+    				<a href="<?php echo esc_url(get_permalink($page -> ID)); ?>">サービス紹介</a>
     			</li>
     			<li class="footer__menu__item txt-link">
-    				<a href="<?php echo esc_url( home_url( '/' ) ); ?>index.php?page_id=41">design cubitsについて</a>
+    				<?php
+							$page = get_page_by_path('about');
+							?>
+    				<a href="<?php echo esc_url(get_permalink($page -> ID)); ?>">design cubitsについて</a>
     			</li>
     			<li class="footer__menu__item txt-link">
-    				<a href="<?php echo esc_url( home_url( '/' ) ); ?>index.php?page_id=30">ブログ</a>
+    				<?php
+							$page = get_page_by_path('blog');
+							?>
+    				<a href="<?php echo esc_url(get_permalink($page -> ID)); ?>">ブログ</a>
     			</li>
     			<li class="footer__menu__item txt-link">
-    				<a href="<?php echo esc_url( home_url( '/' ) ); ?>index.php?page_id=119">お問い合わせ</a>
+    				<?php
+							$page = get_page_by_path('contact');
+							?>
+    				<a href="<?php echo esc_url(get_permalink($page -> ID)); ?>">お問い合わせ</a>
     			</li>
     		</ul>
     		<ul class="footer__under">
-    			<li class="privacy-policy"><a
-    					href="<?php echo esc_url( home_url( '/' ) ); ?>index.php?page_id=3"><small>プライバシーポリシー</small></a>
+    			<li class="privacy-policy"><?php
+							$page = get_page_by_path('privacy-policy');
+							?>
+    				<a href="<?php echo esc_url(get_permalink($page -> ID)); ?>"><small>プライバシーポリシー</small></a>
     			</li>
     		</ul>
     	</div>
