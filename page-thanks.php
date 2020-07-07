@@ -27,7 +27,9 @@
 		<section class="sent">
 			<h4 class="sent__headline">送信が完了しました。</h4>
 			<p class="sent__sentence">後ほどご連絡をさせていただきます。<br>この度は大変ありがとうございました。</p>
-			<div class="btn btn--back-to-top"><a href="#">Topへ戻る</a></div>
+			<p class="sent__sentence">
+				※通常4営業日以内にご返答いたしますが、お問い合わせ内容によってはご返信しかねる場合がございます。あらかじめご了承ください。</p>
+			<div class="btn btn--back-to-top"><a href="https://design-cubits.com/">Topへ戻る</a></div>
 		</section><!-- //sent -->
 	</div>
 	<!-- //contents -->
