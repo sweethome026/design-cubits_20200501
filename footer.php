@@ -3,7 +3,7 @@
 
     	<!-- pagetop -->
     	<div id="pagetop">
-    		<a href="index.html">
+    		<a href="#">
     			<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/imgs/pagetop_img.svg" alt="ページトップボタン">
     		</a>
     	</div>
