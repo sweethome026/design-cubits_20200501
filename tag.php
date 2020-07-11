@@ -26,11 +26,9 @@
 	<!-- contents -->
 	<div id="contents" class="blog-contents wrap">
 		<section class="blog-main">
-			<?php
-				$category = get_the_category();
-				$cat_name = $category[0]->cat_name;
-			?>
-			<h2 class="heading"><?php echo $cat_name; ?> の記事一覧</h2>
+			<h2 class="heading">
+				<?php single_tag_title(); ?>の記事一覧
+			</h2>
 			<div class="articles">
 
 				<!-- メインループ開始 -->
