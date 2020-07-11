@@ -57,24 +57,68 @@
 				</header>
 				<div class="ad">
 					<!-- google adsence code -->
+					<style>
+					.responsive-test {
+						width: 320px;
+						height: 100px;
+					}
+
+					@media(min-width: 470px) {
+						.responsive-test {
+							width: 100%;
+							height: 60px;
+						}
+					}
+
+					@media(min-width: 730px) {
+						.responsive-test {
+							width: 100%;
+							height: 90px;
+						}
+					}
+					</style>
 					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-					<ins class="adsbygoogle" style="display:inline-block;width:100%; height:90px"
-						data-ad-client="ca-pub-9976229156087682" data-ad-slot="3084543710"></ins>
+					<!-- designCubitsコンテンツ1 -->
+					<ins class="adsbygoogle responsive-test" style="display:inline-block"
+						data-ad-client="ca-pub-9976229156087682" data-ad-slot="5849569316" style="height:90px"></ins>
 					<script>
 					(adsbygoogle = window.adsbygoogle || []).push({});
-					</script><!-- //google adsence code -->
+					</script>
+
+					<!-- //google adsence code -->
 				</div>
 				<div class="single-article__contents">
 					<?php the_content(); ?>
 				</div>
 				<div class="ad">
-					<!-- google adsence code -->
+					<style>
+					.responsive-test {
+						width: 320px;
+						height: 100px;
+					}
+
+					@media(min-width: 470px) {
+						.responsive-test {
+							width: 100%;
+							height: 60px;
+						}
+					}
+
+					@media(min-width: 730px) {
+						.responsive-test {
+							width: 100%;
+							height: 90px;
+						}
+					}
+					</style>
 					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-					<ins class="adsbygoogle" style="display:inline-block;width:100%; height:90px"
-						data-ad-client="ca-pub-9976229156087682" data-ad-slot="3084543710"></ins>
+					<!-- designCubitsコンテンツ2 -->
+					<ins class="adsbygoogle responsive-test" style="display:inline-block"
+						data-ad-client="ca-pub-9976229156087682" data-ad-slot="7326302516"></ins>
 					<script>
 					(adsbygoogle = window.adsbygoogle || []).push({});
-					</script><!-- //google adsence code -->
+					</script>
+					<!-- //google adsence code -->
 				</div>
 				<footer class="single-article__footer">
 					<div class="pager noicon">
