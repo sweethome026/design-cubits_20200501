@@ -1,13 +1,10 @@
 @charset "UTF-8";
 /*
-Theme Name: design cubits 20200514
-Theme URL: テーマのサイトのURI
-Description: テーマの説明
-Author: 作者の名前
-Version: テーマのバージョン
-Tags: テーマの特徴を表すタグ（カンマ区切り/オプション）
-License: テーマのライセンス
-License URI: テーマのライセンスのURI
+Theme Name: design cubits オリジナルテーマ
+Author: komma
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 */
 /*==================================================
 
@@ -2300,7 +2297,7 @@ Page style
   margin-top: 24px;
 }
 
-#blog .single-article__contents p + p {
+#blog .single-article__contents p + * {
   margin-top: 1.8em;
 }
 
@@ -2333,6 +2330,10 @@ Page style
   font-size: 80%;
   font-weight: 900;
   color: #17636c;
+}
+
+#blog .single-article__contents ul + * {
+  margin-top: 1.8em;
 }
 
 #blog .single-article__footer {

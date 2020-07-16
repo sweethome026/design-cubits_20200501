@@ -1057,7 +1057,7 @@ Page style
 			}
 			
 			p {
-				+ p {
+				+ * {
 					margin-top: 1.8em;
 				}
 			}
@@ -1102,6 +1102,9 @@ Page style
 					a {
 
 					}
+				}
+				+ * {
+					margin-top: 1.8em;
 				}
 			}
 		}
